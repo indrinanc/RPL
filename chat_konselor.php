@@ -4,7 +4,6 @@ if ($koneksi->connect_error) {
     die("Koneksi gagal: " . $koneksi->connect_error);
 }
 
-// Ambil hanya pengirim dengan role 'user'
 $query = "SELECT DISTINCT pengirim FROM pesan_chat WHERE pengirim_role = 'user'";
 $result = $koneksi->query($query);
 ?>
@@ -12,7 +11,7 @@ $result = $koneksi->query($query);
 <html>
 <head>
     <title>Pesan Konseling</title>
-    <link rel="stylesheet" href="konselor.css">
+    <link rel="stylesheet" href="chat_konselor.css">
     <link rel="stylesheet" href="global.css">
 </head>
 <body>
