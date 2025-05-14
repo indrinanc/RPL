@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    background-color: #fdfafa;
+  }
+  
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    background-color: #f7f4f4;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    height: 75px;
+    box-sizing: border-box;
+  }
+  .topbar h1 {
+    color: #4a6fa5;
+    font-size: 30px;
+    margin:0;
+  }
+  
+  .user-info {
+    margin-right: 40px;
+    font-size: 14px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    margin-left: 350px;
+    padding: 200px;
+  }
+.header-right {
+  color: #374151; 
+  font-weight: bold;
+}
+  
+.content {
+  margin-left: 250px; /* atau sesuai lebar sidebar */
+  margin-top: 75px; /* sesuaikan dengan topbar */
+  height: calc(100vh - 75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* kecil saja, jangan 200px */
+}
+
+  
+  .chat-box {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .chat-header {
+    background-color: #f9a8d4;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fdfdfd;
+  }
+  
+  .chat-bubble {
+    max-width: 70%;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 40px;
+    position: relative;
+    line-height: 1.4;
+  }
+  
+  .chat-bubble.user {
+    background-color: #d3eafc;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+  }
+  
+  .chat-bubble.konselor {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+  }
+  
+  .chat-bubble .time {
+    font-size: 10px;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+  }
+  
+  .chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fafafa;
+  }
+  
+  .chat-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .chat-form button {
+    background-color: #f9a8d4;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 0 20px;
+    margin-left: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  .file-upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    color: #333;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .file-upload-btn:hover {
+    background-color: #e0e0e0;
+  }
+  /* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative; width: 100%; padding: 1rem;
+  }
+  .main {
+    margin-left: 0; width: 100%;
+  }
+  .header {
+    left: 0;
+  }
+  .main-content {
+    margin-top: 70px; padding: 1rem;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .action-card {
+    width: 100%;
+  }
+}
+  
