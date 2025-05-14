@@ -1,0 +1,120 @@
+/* Topbar/Header */
+.topbar {
+    background-color: #faf7f5;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    font-size: 28px;
+    color: #325c91;
+    font-weight: bold;
+    margin: 0;
+}
+
+.topbar .header-right {
+    font-weight: bold;
+    color: #2e3a59;
+    font-size: 16px;
+}
+/* --- Kotak Forum Utama & Balasan --- */
+.forum-card, .reply-card {
+    background: #f9f7f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- Header pada forum dan balasan --- */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.card-header .profile-icon {
+    background: #4a6fa5;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 9px;
+    font-size: 16px;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.time {
+    margin-left: auto;
+    font-size: 12px;
+    color: #888;
+}
+
+/* --- Isi pesan --- */
+.card-body {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #222;
+    position: relative;
+}
+
+/* --- Tombol hapus balasan (ikon) --- */
+.delete-icon {
+    float: right;
+    text-decoration: none;
+    color: #c44;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* --- Form Balasan --- */
+.reply-form {
+    margin-top: 20px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.reply-form button {
+    padding: 10px 20px;
+    background: #f9a8d4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.reply-form button:hover {
+    background: #f9a8d4;
+}
+
+/* --- Judul & Kembali ke Forum --- */
+.content h2, .content h3 {
+    margin-top: 20px;
+    color: #444;
+}
+
+.content a {
+    text-decoration: none;
+    color: #d46a9c;
+    font-weight: bold;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}

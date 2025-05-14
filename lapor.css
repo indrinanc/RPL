@@ -1,0 +1,132 @@
+/* Reset & Base */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #f1f5f9;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main wrapper */
+.main {
+  margin-left: 100px; 
+  width: calc(100% - 250px);
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  position: fixed; 
+  top: 0; 
+  left: 200px; 
+  right: 0;
+  height: 60px; 
+  background: #fff;
+  padding: 1rem 2rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.header h1 {
+  color: #1e40af; 
+  font-size: 2rem;
+}
+.header-right {
+  color: #374151; 
+  font-weight: bold;
+}
+
+/* Content area */
+.main-content {
+margin-top: 0px;
+ flex: 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 2rem;
+ min-height: calc(100vh - 96px); 
+ border-radius: 30px; 
+}
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+}
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+.btn-submit {
+  background-color: #f9a8d4;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+.btn-submit:hover {
+  background-color: #f9a8d4;
+}
+/* Optional: Button mirip "Kembali" dari screenshot */
+.btn-kembali {
+  background-color: #f28b94;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.btn-kembali:hover {
+  background-color: #f9a8d4;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; }
+  .header { left: 0; }
+  .form-card { padding: 1rem; margin: 0 1rem; }
+}

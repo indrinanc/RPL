@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f5f2;
+  }
+  .topbar {
+  background-color: #f8f5f2;
+  padding: 20px 30px;
+  margin-left: 0px; /* sesuai sidebar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+  
+  .topbar h1 {
+    color: #4a6fa5;
+    font-size: 30px;
+    margin:0;
+  }
+  
+  .user-info {
+    margin-right: 30px;
+    font-size: 14px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    margin-left: 200px;
+    padding: 150px;
+  }
+.header-right {
+  color: #374151; 
+  font-weight: bold;
+}
+  
+.konseling-box {
+    max-width: 700px;
+    background: white;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-right: 200px;
+  }
+  
+  .konseling-box h2 {
+    font-size: 28px;
+    color: #4a6fa5;
+    margin-bottom: 20px;
+  }
+.konseling-box h3 {
+  margin-top: 30px; /* atau nilai lain seperti 30px */
+}
+  
+  .konseling-box select,
+  .konseling-box input[type="date"],
+  .konseling-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .konseling-box button {
+    background-color: #f9a8d4;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .konseling-box button:hover {
+    background-color: #f472b6;
+  }
+  
+  .hasil-janji {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff7f9;
+    border-left: 5px solid #e6a9b1;
+    font-size: 16px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+  .alert {
+    background-color: #e7f3e7;
+    border: 1px solid #b2d8b2;
+    color: #2e6e2e;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .janji-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .janji-list li {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  @media screen and (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+  

@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Jika belum login, alihkan ke halaman login
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
@@ -13,68 +12,48 @@ if (!isset($_SESSION['username'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - SafeVoice</title>
-  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="admin_dashboard.css">
 </head>
 <body>
+  
+  <!-- SIDEBAR tetap sama -->
+  <div class="sidebar">
+    <div class="logo">SafeVoice</div>
+    <div class="sidebar-menu">
+      <ul>
+        <li><a href="dashboard.php"><span class="icon">🏠</span><span>Dashboard</span></a></li>
+        <li><a href="forum_admin.php"><span class="icon">💬</span><span>Forum Diskusi</span></a></li>
+      </ul>
+    </div>
+    <ul class="sidebar-logout">
+      <li><a href="logout.php"><span class="icon">🚪</span><span>Logout</span></a></li>
+    </ul>
+  </div>
+
+  <div class="main">
   <header class="header">
     <h1>Selamat Datang, Admin <?php echo $_SESSION['username']; ?> !</h1>
-    <a href="logout.php" class="logout-button">Logout</a>
+    <a href="login.php" class="logout-button">Logout</a>
   </header>
 
   <main class="main-content">
-    <section class="card">
-      <h2>Pelapor</h2>
-      <p>Laporkan kejadian kekerasan seksual yang Anda alami atau saksikan secara aman.</p>
-      <a href="lapor.php" class="button">Lapor Sekarang</a>
-    </section>
+    <div class="greeting-card">
+        Hai, <?php echo htmlspecialchars($_SESSION['username']); ?>!
+      </div>
+    
 
-    <section class="card">
-      <h2>Status Laporan</h2>
-      <p>Lihat perkembangan dan tanggapan dari laporan yang telah Anda buat.</p>
-      <a href="status_laporan.php" class="button">Lihat Status</a>
-    </section>
-
-    <section class="card">
-      <h2>Bantuan & Konseling</h2>
-      <p>Dapatkan akses ke layanan konseling dan bantuan psikologis secara rahasia dan aman.</p>
-      <a href="konseling.php" class="button">Cari Bantuan</a>
-    </section>
-
-    <section class="card">
-      <h2>Informasi dan Edukasi</h2>
-      <p>Dapatkan informasi dan edukasi.</p>
-      <a href="konseling.php" class="button">Cari Bantuan</a>
-    </section>
-  </main>
-
-  <div class="sidebar">
-  <h2>SafeVoice</h2>
-  <ul>
-    <li><a href="dashboard.php"><i class="icon">🏠</i> Dashboard</a></li>
-    <li><a href="forum.php"><i class="icon">💬</i> Forum Diskusi</a></li>
-    <li><a href="pengaturan.php"><i class="icon">⚙️</i> Pengaturan</a></li>
-    <li><a href="logout.php"><i class="icon">🚪</i> Keluar</a></li>
-   </ul>
-   </div>
-
-   <section class="related-articles">
-    <h2>Artikel Terkait</h2>
-    <div class="article-card">
-        <h3>Judul Artikel 1</h3>
-        <p>Ringkasan singkat tentang artikel ini. Klik untuk membaca lebih lanjut.</p>
-        <a href="#" class="read-more">Baca Selengkapnya</a>
+      <section class="actions">
+        <div class="action-card">
+          <h2>Laporan Masuk</h2>
+          <a href="laporan_admin.php" class="action-btn">Cek Laporan Masuk</a>
     </div>
 
-    <div class="article-card">
-        <h3>Judul Artikel 2</h3>
-        <p>Ringkasan singkat tentang artikel ini. Klik untuk membaca lebih lanjut.</p>
-        <a href="#" class="read-more">Baca Selengkapnya</a>
-    </div>
-        </section>
-
-
-  <footer class="footer">
-    <p>© 2025 SafeVoice. Semua Hak Dilindungi.</p>
-  </footer>
+      <div class="action-card">
+        <h2>Artikel</h2>
+        <a href="artikel_admin.php" class="action-btn">List Artikel</a>
+      </div>
+    </section>
+  </div>
+</main>
 </body>
 </html>

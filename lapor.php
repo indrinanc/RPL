@@ -27,38 +27,51 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat Laporan</title>
-    <link rel="stylesheet" href="dashboard.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Buat Laporan - SafeVoice</title>
+  <link rel="stylesheet" href="lapor.css"/>
+  <link rel="stylesheet" href="global.css"/>
 </head>
 <body>
-<div class="sidebar">
-    <h2>SafeVoice</h2>
-    <ul>
-        <li><a href="dashboard.php">Dashboard</a></li>
-        <li><a href="forum.php">Forum Diskusi</a></li>
-        <li><a href="pengaturan.php">Pengaturan</a></li>
-        <li><a href="logout.php">Keluar</a></li>
-    </ul>
+<?php include 'sidebar.php'; ?>
+
+<div class="main">
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Buat Laporan</h1>
+    <div class="header-right">
+      Hai, <?php echo htmlspecialchars($_SESSION['username']); ?>!
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="form-container">
+      <form action="lapor.php" method="post" enctype="multipart/form-data">
+        <!-- Topik -->
+        <div class="form-group">
+          <label for="topik">Topik</label>
+          <input type="text" id="topik" name="topik" required>
+        </div>
+
+        <!-- Keterangan -->
+        <div class="form-group">
+          <label for="keterangan">Keterangan</label>
+          <textarea id="keterangan" name="keterangan" required></textarea>
+        </div>
+
+        <!-- Unggah Bukti -->
+        <div class="form-group">
+          <label for="bukti">Unggah Bukti</label>
+          <input type="file" id="bukti" name="bukti" required>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Kirim</button>
+      </form>
+    </div>
+  </main>
 </div>
 
-<main class="main-content">
-    <section class="form-section">
-        <h2>Buat Laporan</h2>
-        <form action="lapor.php" method="POST" enctype="multipart/form-data">
-            <label for="topik">Topik</label>
-            <input type="text" id="topik" name="topik" required>
-
-            <label for="keterangan">Keterangan</label>
-            <textarea id="keterangan" name="keterangan" rows="6" required></textarea>
-
-            <label for="bukti">Unggah Bukti</label>
-            <input type="file" id="bukti" name="bukti" accept="image/*,application/pdf">
-
-            <button type="submit">Kirim</button>
-        </form>
-    </section>
-</main>
 </body>
 </html>

@@ -1,0 +1,134 @@
+/* Reset & Base */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #faf7f5;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  bottom: 0;
+  width: 250px;
+  background: #f9a8d4;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+.logo {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.sidebar-menu ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0;
+}
+.sidebar-menu li {
+  margin-bottom: 1rem;
+}
+.sidebar-menu a {
+  display: flex; 
+  align-items: center;
+  color: #fff; 
+  text-decoration: none;
+  padding: .75rem 1.5rem;
+  border-radius: 0 5px 5px 0;
+  font-weight: bold; 
+  transition: background .2s;
+}
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background: #f472b6;
+}
+.icon {
+  margin-right: .75rem;
+  font-size: 1.2rem;
+  width: 24px; text-align: center;
+}
+/* Logout */
+.sidebar-logout {
+  list-style: none;
+  margin-top: auto; 
+  padding: 1rem 1.5rem 0; 
+  border-top: 1px solid rgba(255,255,255,0.4);  
+}
+.sidebar-logout li { 
+  margin-top: 1rem; 
+}
+.sidebar-logout a {
+  display: flex; 
+  align-items: center;
+  color: #fff; 
+  text-decoration: none;
+  font-weight: bold; 
+  transition: background 0.2s;
+}
+.sidebar-logout a:hover {
+  background: #f472b6;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+/* Main wrapper */
+.main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  display: flex; flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0; left: 250px; right: 0;
+  height: 70px;
+  padding: 1rem 2rem;
+  background: #fff;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.header h1 {
+  font-size: 2rem; color: #1e40af;
+}
+.logout-button {
+  background: transparent;
+  color: #4b5563;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* KONTEN UTAMA */
+.main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  display: flex; 
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .header {
+    left: 0;
+  }
+}

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -64,7 +64,7 @@ input[type="password"] {
 .button {
   width: 100%;
   padding: 10px;
-  background-color: #f4a2ad;
+  background-color: #f9a8d4;
   color: white;
   border: none;
   border-radius: 6px;
@@ -75,7 +75,7 @@ input[type="password"] {
 }
 
 .button:hover {
-  background-color: #e78b97;
+  background-color: #f472b6;
 }
 
 /* Teks login */

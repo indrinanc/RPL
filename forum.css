@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #faf7f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.topbar {
+    background-color: #f8f5f2;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.topbar h1 {
+    color: #4a6fa5;
+    font-size: 28px;
+    margin: 0;
+}
+
+.header-right {
+    font-weight: bold;
+    color: #374151;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.forum-list {
+    margin-top: 30px;
+}
+
+.forum-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-header .profile-icon {
+    background: #4a6fa5;
+    color: white;
+    border-radius: 60%;
+    padding: 10px 12px;
+    font-weight: bold;
+}
+
+.card-body {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.action-button {
+    text-decoration: none;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.action-button:hover {
+    color: #f9a8d4;
+}
+
+.replies {
+    margin-left: 30px;
+    margin-top: 10px;
+    border-left: 2px solid #ddd;
+    padding-left: 15px;
+}
+
+.reply-card {
+    background-color: #f7f6f5;
+    padding: 12px;
+    margin-top: 10px;
+    border-left: 4px solid #f9a8d4;
+    border-radius: 5px;
+}
+
+.add-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #f9a8d4;
+    border-radius: 50%;
+    font-size: 32px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.add-button:hover {
+    background: #f9a8d4;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .add-button {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .replies {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+}

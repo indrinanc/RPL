@@ -1,0 +1,79 @@
+/* Reset & umum */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #faf7f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container utama */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    top:-70px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #1e40af;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Tombol kirim */
+button[type="submit"] {
+    background-color: #f9a8d4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button[type="submit"]:hover {
+    text-decoration: underline;
+    background-color: #f472b6;
+    
+}
+
+/* Tombol batal */
+.cancel-button {
+    background-color: #f9a8d4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cancel-button:hover {
+    text-decoration: underline;
+    background-color: #f472b6;
+}
